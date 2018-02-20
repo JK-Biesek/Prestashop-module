@@ -61,7 +61,7 @@ if (!defined('_PS_VERSION_'))
       $total_paid = $customerStats['total_orders'];
       $total_paid = number_format((float)$total_paid, 2, '.', '');
 
-  	   $this->context->smarty->assign(array(
+      $this->context->smarty->assign(array(
         'customer' =>$customer,
         'order_number' =>count($orders),
         'paid' =>$total_paid,
