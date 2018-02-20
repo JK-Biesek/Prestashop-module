@@ -1,7 +1,7 @@
 <div class="panel panel-sm">
 <div class="panel-heading">
 <i class="icon-pencil"></i>
-{l s='Dane klienta:' mod='clientdata'}{$customer->firstname}
+{l s='Customer Data:' mod='clientdata'}{$customer->firstname}
 </div>
 <form id="clientdata" class="form-horizontal" >
 <div class="form-group">
