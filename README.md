@@ -1,7 +1,7 @@
 # Prestashop-module
 Prestashop module
 To Install this module simply download it from this link 
-https://drive.google.com/file/d/1l8zCrHwySN547OaIcgm9sGmzLfYKfFec/view?usp=sharing
+https://drive.google.com/file/d/1xbk5E4b9L--w4KMUCMCGM06SyLIUMz54/view?usp=sharing
 
 In your Shop BackOffice to go modules tab and press top right button "add new module"
 
