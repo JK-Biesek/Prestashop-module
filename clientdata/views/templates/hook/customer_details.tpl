@@ -7,6 +7,7 @@
 <div class="form-group">
 <div class="col-xs-6 col-sm-3 box-stats color2">
 			{$customer->firstname} {$customer->lastname}</br>
+			{l s='Last Connected : ' mod='clientdata'}<span class="alert-success">{$connect}</span></br>
 			<span class="title">{l s='Date of Birth of the customer is :' mod='clientdata'}</span>
 			<span class="alert-info">{$customer->birthday}</span></br>
 			 {l s='Who has made:' mod='clientdata'}

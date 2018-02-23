@@ -61,10 +61,25 @@ if (!defined('_PS_VERSION_'))
       $total_paid = $customerStats['total_orders'];
       $total_paid = number_format((float)$total_paid, 2, '.', '');
 
-      $this->context->smarty->assign(array(
+      $sql_guest = 'SELECT id_guest from '._DB_PREFIX_.'guest ';
+      $sql_guest .= ' WHERE id_customer = '.(int)$id_customer;
+      $run = Db::getInstance()->getValue($sql_guest);
+      if($run){
+        $id_guest = $run;
+        $sql_visit = 'SELECT date_add from '._DB_PREFIX_.'connections ';
+        $sql_visit .= 'WHERE id_guest = '.$id_guest;
+        $row = Db::getInstance()->getRow($sql_visit);
+        if($row){
+          foreach ($row as $date => $connected) {
+          $last_visit = $connected;
+          }
+        }
+      }
+  	   $this->context->smarty->assign(array(
         'customer' =>$customer,
         'order_number' =>count($orders),
         'paid' =>$total_paid,
+        'connect'=>$last_visit,
         ));
 
           return $this->display(__FILE__, 'customer_details.tpl', $this->getCacheId('customer_details'));
